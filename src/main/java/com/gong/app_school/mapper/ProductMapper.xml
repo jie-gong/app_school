@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gong.app_school.mapper.ProductMapper">
+    <!--根据厂商属性查询产品-->
+    <select id="SelectByClass" resultType="com.gong.app_school.model.dao.Product">
+        select *
+        from product
+        where classify = #{classify};
+    </select>
+</mapper>
+
